@@ -1,46 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Land of Bengal BD | Premium Collection</title>
+<title>Bengal Heritage Hub | Authentic Bengal Products</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Playfair+Display:wght@700&family=Hind+Siliguri:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Playfair+Display:wght@700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap');
 
 :root{
   --bg:#050508;
-  --card:rgba(20,20,28,0.6);
+  --card:rgba(20,20,28,0.65);
   --accent:#d4af37;
-  --accent-glow:rgba(212,175,55,0.5);
+  --accent2:#ffed4e;
+  --accent-glow:rgba(212,175,55,0.6);
   --text:#f5f5f7;
   --muted:#a1a1aa;
 }
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:var(--bg);color:var(--text);overflow-x:hidden;scroll-behavior:smooth;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);overflow-x:hidden;scroll-behavior:smooth;font-family:'Poppins',sans-serif;}
 
 #particles{
   position:fixed;top:0;left:0;width:100%;height:100%;
-  z-index:-1;opacity:0.3;
+  z-index:-1;opacity:0.4;
 }
 
 header{
   position:sticky;top:0;z-index:100;
-  backdrop-filter:blur(20px);
-  background:rgba(5,5,8,0.7);
-  padding:20px 5%;
+  backdrop-filter:blur(25px);
+  background:rgba(5,5,8,0.85);
+  padding:22px 5%;
   display:flex;justify-content:space-between;align-items:center;
-  border-bottom:1px solid rgba(212,175,55,0.15);
-  animation:slideDown 1s ease;
+  border-bottom:1px solid rgba(212,175,55,0.25);
 }
-header h1{
+.logo{
   font-family:'Playfair Display',serif;
-  font-size:26px;color:var(--accent);
-  text-shadow:0 0 20px var(--accent-glow);
-  letter-spacing:1.5px;
+  font-size:30px;font-weight:800;
+  background:linear-gradient(135deg,var(--accent),var(--accent2),var(--accent));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 0 30px var(--accent-glow));
+  letter-spacing:2.5px;
 }
 nav a{
-  color:var(--muted);margin-left:25px;text-decoration:none;
-  font-weight:500;transition:all .3s;position:relative;
+  color:var(--muted);margin-left:28px;text-decoration:none;
+  font-weight:500;transition:all .3s;
 }
 nav a:hover{color:var(--accent);}
 
@@ -48,157 +50,112 @@ nav a:hover{color:var(--accent);}
   min-height:100vh;
   display:flex;flex-direction:column;justify-content:center;align-items:center;
   text-align:center;padding:0 5%;
-  position:relative;
 }
 .hero h2{
   font-family:'Playfair Display',serif;
-  font-size:64px;font-weight:700;line-height:1.2;
-  opacity:0;animation:fadeUp 1.2s ease 0.3s forwards;
-}
-.hero h2 span{
-  background:linear-gradient(135deg,var(--accent),#ffed4e);
+  font-size:72px;font-weight:800;line-height:1.2;
+  background:linear-gradient(135deg,#fff,var(--accent2));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  filter:drop-shadow(0 0 30px var(--accent-glow));
 }
 .hero .bangla{
   font-family:'Hind Siliguri',sans-serif;
-  font-size:22px;color:#e8e8e8;margin-top:15px;
-  opacity:0;animation:fadeUp 1.2s ease 0.5s forwards;
+  font-size:26px;color:#e8e8e8;margin-top:20px;font-weight:600;
 }
 .hero p{
-  color:var(--muted);margin:20px 0;font-size:18px;max-width:650px;
-  opacity:0;animation:fadeUp 1.2s ease 0.7s forwards;
+  color:var(--muted);margin:25px 0;font-size:18px;max-width:650px;
 }
 .hero button{
-  padding:16px 40px;border:none;border-radius:50px;
+  padding:18px 50px;border:none;border-radius:50px;
   background:linear-gradient(135deg,var(--accent),#b8860b);
-  color:#000;font-weight:700;cursor:pointer;transition:all .4s;
-  box-shadow:0 0 40px var(--accent-glow);
-  opacity:0;animation:fadeUp 1.2s ease 0.9s forwards;
+  color:#000;font-weight:700;font-size:17px;cursor:pointer;
+  transition:all .4s;box-shadow:0 0 50px var(--accent-glow);
 }
 .hero button:hover{
   transform:translateY(-5px) scale(1.05);
-  box-shadow:0 0 60px var(--accent-glow);
+  box-shadow:0 0 70px var(--accent-glow);
 }
 
 section{padding:100px 5%;}
 .section-title{text-align:center;margin-bottom:60px;}
 .section-title h3{
   font-family:'Playfair Display',serif;
-  font-size:42px;color:var(--accent);
-  opacity:0;transform:translateY(30px);
-  transition:all 0.8s ease;
+  font-size:48px;color:var(--accent);
 }
-.section-title.visible h3{opacity:1;transform:translateY(0);}
-.section-title p{
-  color:var(--muted);margin-top:15px;font-size:16px;
-  opacity:0;transform:translateY(20px);
-  transition:all 0.8s ease 0.2s;
-}
-.section-title.visible p{opacity:1;transform:translateY(0);}
+.section-title p{color:var(--muted);margin-top:15px;font-size:16px;}
 
 .products{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:35px;
 }
 .product{
   background:var(--card);
-  backdrop-filter:blur(15px);
+  backdrop-filter:blur(20px);
   border-radius:24px;
   overflow:hidden;
-  border:1px solid rgba(212,175,55,0.1);
-  transition:all .5s cubic-bezier(0.4,0,0.2,1);
-  opacity:0;transform:translateY(50px);
+  border:1px solid rgba(212,175,55,0.2);
+  transition:all .5s;
 }
-.product.visible{opacity:1;transform:translateY(0);}
 .product:hover{
   transform:translateY(-12px);
   border-color:var(--accent-glow);
-  box-shadow:0 20px 50px rgba(212,175,55,0.2);
+  box-shadow:0 25px 60px rgba(212,175,55,0.3);
 }
-.product img{
-  width:100%;height:280px;object-fit:cover;
-  transition:transform .6s ease;
-}
-.product:hover img{transform:scale(1.1);}
-.product-info{padding:25px;}
+.product img{width:100%;height:300px;object-fit:cover;}
+.product-info{padding:28px;}
 .product-info h4{
-  margin-bottom:10px;color:var(--accent);
-  font-size:20px;font-family:'Playfair Display',serif;
+  margin-bottom:12px;color:var(--accent);
+  font-size:24px;font-family:'Playfair Display',serif;
 }
-.product-info p{color:var(--muted);font-size:14px;line-height:1.7;}
-.benefits{
-  margin-top:12px;padding-left:15px;
-  color:var(--muted);font-size:13px;line-height:1.8;
-}
+.product-info p{color:var(--muted);font-size:15px;line-height:1.8;font-family:'Hind Siliguri',sans-serif;}
+.benefits{margin-top:15px;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.9;font-family:'Hind Siliguri',sans-serif;}
 .tag{
-  display:inline-block;margin-top:15px;padding:8px 18px;
+  display:inline-block;margin-top:18px;padding:9px 20px;
   border:1px solid rgba(212,175,55,0.4);
   border-radius:30px;font-size:12px;color:var(--accent);
-  background:rgba(212,175,55,0.05);
+  background:rgba(212,175,55,0.1);
+  font-weight:600;
 }
 
-/* Order Form */
 .order-form{
-  max-width:600px;margin:50px auto;
-  background:var(--card);backdrop-filter:blur(15px);
-  padding:40px;border-radius:24px;
-  border:1px solid rgba(212,175,55,0.2);
+  max-width:650px;margin:50px auto;
+  background:var(--card);backdrop-filter:blur(20px);
+  padding:50px;border-radius:28px;
+  border:1px solid rgba(212,175,55,0.3);
+  box-shadow:0 25px 60px rgba(212,175,55,0.2);
 }
 .order-form h4{
   font-family:'Playfair Display',serif;
-  font-size:28px;color:var(--accent);margin-bottom:25px;
+  font-size:32px;color:var(--accent);margin-bottom:30px;
   text-align:center;
 }
 .order-form input,.order-form select,.order-form textarea{
-  width:100%;padding:14px 18px;margin-bottom:18px;
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(212,175,55,0.2);
-  border-radius:12px;color:var(--text);
-  font-size:15px;font-family:'Hind Siliguri',sans-serif;
+  width:100%;padding:16px 22px;margin-bottom:20px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(212,175,55,0.3);
+  border-radius:14px;color:var(--text);
+  font-size:16px;font-family:'Hind Siliguri',sans-serif;
 }
 .order-form input:focus,.order-form select:focus,.order-form textarea:focus{
   outline:none;border-color:var(--accent);
-  box-shadow:0 0 15px rgba(212,175,55,0.3);
+  box-shadow:0 0 25px rgba(212,175,55,0.4);
 }
 .order-form button{
-  width:100%;padding:16px;border:none;border-radius:12px;
+  width:100%;padding:18px;border:none;border-radius:14px;
   background:linear-gradient(135deg,var(--accent),#b8860b);
-  color:#000;font-weight:700;font-size:16px;cursor:pointer;
-  transition:all .3s;
+  color:#000;font-weight:700;font-size:18px;cursor:pointer;
+  transition:all .3s;font-family:'Hind Siliguri',sans-serif;
 }
-.order-form button:hover{transform:scale(1.02);box-shadow:0 0 30px var(--accent-glow);}
-
-.about{
-  text-align:center;max-width:750px;margin:auto;
-  font-size:17px;line-height:1.9;color:var(--muted);
-  font-family:'Hind Siliguri',sans-serif;
-}
+.order-form button:hover{transform:scale(1.03);box-shadow:0 0 40px var(--accent-glow);}
 
 footer{
-  text-align:center;padding:50px 5%;
+  text-align:center;padding:60px 5%;
   border-top:1px solid rgba(255,255,255,0.05);
   color:var(--muted);font-size:14px;
 }
 
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(40px);}
-  to{opacity:1;transform:translateY(0);}
-}
-@keyframes slideDown{
-  from{opacity:0;transform:translateY(-30px);}
-  to{opacity:1;transform:translateY(0);}
-}
-
-.product:nth-child(even){animation:float 6s ease-in-out infinite;}
-@keyframes float{
- 0%,100%{transform:translateY(0);}
- 50%{transform:translateY(-10px);}
-}
-
 @media(max-width:768px){
-  .hero h2{font-size:38px;}
-  .hero .bangla{font-size:18px;}
+  .hero h2{font-size:42px;}
+  .logo{font-size:26px;}
   nav{display:none;}
 }
 </style>
@@ -208,7 +165,7 @@ footer{
 <canvas id="particles"></canvas>
 
 <header>
-  <h1>Land of Bengal BD</h1>
+  <h1 class="logo">Bengal Heritage Hub</h1>
   <nav>
     <a href="#home">Home</a>
     <a href="#products">Products</a>
@@ -218,51 +175,51 @@ footer{
 </header>
 
 <section class="hero" id="home">
-  <h2>Where Heritage Meets <span>Excellence</span></h2>
-  <p class="bangla">বাংলার ঐতিহ্য আর গুণমানের মেলবন্ধন - যা মন ছুঁয়ে যায়</p>
-  <p>Discover authentic Bengal treasures crafted with tradition, quality, and passion. Every product carries a story.</p>
+  <h2>Where Bengal's Soul Lives</h2>
+  <p class="bangla">বাংলার প্রাণ, ঐতিহ্য আর বিশুদ্ধতার বিশ্বস্ত ঠিকানা</p>
+  <p>Authentic honey, premium fabrics, footwear and solar solutions. Sourced directly from the heart of Bengal with 100% quality guarantee.</p>
   <button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Explore Collection</button>
 </section>
 
 <section id="products">
   <div class="section-title">
-    <h3>Curated Collection</h3>
-    <p>Handpicked for the connoisseur in you</p>
+    <h3>Our Premium Collection</h3>
+    <p>Handpicked with care, delivered with trust</p>
   </div>
   <div class="products">
     
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=600" alt="Sundarbans Honey">
+      <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=800" alt="Sundarbans Honey">
       <div class="product-info">
-        <h4>সুন্দরবনের মধু</h4>
-        <p>বিশ্বের বৃহত্তম ম্যানগ্রোভ বন সুন্দরবনের গভীর থেকে সংগ্রহ করা খাঁটি প্রাকৃতিক মধু। প্রাকৃতিক অ্যান্টিবায়োটিক গুণসম্পন্ন, ঠান্ডা-কাশিতে উপকারী।</p>
-        <span class="tag">100% Pure</span>
+        <h4>সুন্দরবনের খাঁটি মধু</h4>
+        <p>বিশ্বের বৃহত্তম ম্যানগ্রোভ বন সুন্দরবনের গভীর থেকে সংগ্রহ করা ১০% প্রাকৃতিক মধু। প্রাকৃতিক অ্যান্টিবায়োটিক গুণসম্পন্ন।</p>
+        <span class="tag">Premium Grade</span>
       </div>
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1558642452-9b32038b66e3?w=600" alt="Hill Forest Honey">
+      <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=800" alt="Hill Forest Honey">
       <div class="product-info">
         <h4>পাহাড়ি জঙ্গলের মধু</h4>
-        <p>চট্টগ্রাম ও পার্বত্য অঞ্চলের পাহাড়ি ফুলের নির্যাস থেকে মৌমাছির তৈরি ঘন ও সুগন্ধি মধু। রোগ প্রতিরোধ ক্ষমতা বাড়াতে সাহায্য করে।</p>
+        <p>চট্টগ্রাম ও পার্বত্য অঞ্চলের পাহাড়ি ফুলের নির্যাস থেকে মৌমাছির তৈরি ঘন ও সুগন্ধি মধু।</p>
         <span class="tag">Wild Harvested</span>
       </div>
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=600" alt="Glass Jar Honey">
+      <img src="https://images.unsplash.com/photo-1558642452-9b32038b66e3?w=800" alt="Village Honey">
       <div class="product-info">
-        <h4>গ্রাম্য মধু</h4>
-        <p>কাচের জারে সংরক্ষিত খাঁটি গ্রাম্য মধু। কোনো কেমিক্যাল ছাড়াই প্রাকৃতিক স্বাদ ও ঘ্রাণ অক্ষুণ্ণ রাখা হয়।</p>
-        <span class="tag">Glass Jar Packed</span>
+        <h4>গ্রাম্য প্রাকৃতিক মধু</h4>
+        <p>বাংলার গ্রামাঞ্চলের ঐতিহ্যবাহী পদ্ধতিতে সংগ্রহ করা খাঁটি মধু। কাচের জারে সংরক্ষিত।</p>
+        <span class="tag">Pure & Natural</span>
       </div>
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Premium Shoes">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800" alt="Premium Shoes">
       <div class="product-info">
-        <h4>প্রিমিয়াম জুতা</h4>
-        <p>হালকা, আরামদায়ক এবং স্টাইলিশ ডিজাইনের জুতা। দৈনন্দিন চলাফেরা, অফিস এবং স্পোর্টস সবখানেই মানানসই।</p>
+        <h4>প্রিমিয়াম কমফোর্ট জুতা</h4>
+        <p>হালকা, আরামদায়ক এবং স্টাইলিশ ডিজাইনের জুতা। অফিস থেকে স্পোর্টস সবখানে পারফেক্ট।</p>
         <span class="tag">Comfort & Style</span>
       </div>
     </div>
@@ -271,23 +228,23 @@ footer{
       <img src="attachment://26770828592577710" alt="Premium Fabrics">
       <div class="product-info">
         <h4>এক্সপোর্ট কোয়ালিটি কাপড়</h4>
-        <p>সকল বয়সী পুরুষ, মহিলা ও শিশুদের জন্য প্রিমিয়াম কোয়ালিটির কাপড়। মসৃণ ফিনিশ, কালার গ্যারান্টি এবং দীর্ঘস্থায়ী ব্যবহার উপযোগী।</p>
-        <span class="tag">Export Grade</span>
+        <p>সকল বয়সী পুরুষ, মহিলা ও শিশুদের জন্য প্রিমিয়াম কোয়ালিটির কাপড়। মসৃণ ফিনিশ, কালার গ্যারান্টি।</p>
+        <span class="tag">Export Quality</span>
       </div>
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1608222351212-18fe0ec7bc87?w=600" alt="Mini Solar Fan">
+      <img src="https://images.unsplash.com/photo-1608222351212-18fe0ec7bc87?w=800" alt="Mini Solar Fan">
       <div class="product-info">
         <h4>মিনি সোলার ফ্যান</h4>
-        <p>কমপ্যাক্ট সাইজের পোর্টেবল সোলার ফ্যান। যেকোনো জায়গায় নিয়ে যান, লোডশেডিংয়ে আরাম পান।</p>
+        <p>পোর্টেবল সোলার ফ্যান। লোডশেডিংয়ে আরাম, বিদ্যুৎ বিল শূন্য।</p>
         <ul class="benefits">
-          <li>• বিদ্যুৎ ছাড়াই 6-8 ঘন্টা চলে</li>
+          <li>• 6-8 ঘন্টা ব্যাকআপ টাইম</li>
           <li>• রিচার্জেবল ব্যাটারি সিস্টেম</li>
           <li>• শব্দহীন অপারেশন</li>
-          <li>• বিদ্যুৎ বিল শূন্য</li>
+          <li>• কমপ্যাক্ট পোর্টেবল ডিজাইন</li>
         </ul>
-        <span class="tag">Portable & Eco</span>
+        <span class="tag">Eco Friendly</span>
       </div>
     </div>
 
@@ -297,63 +254,61 @@ footer{
 <section id="order">
   <div class="section-title">
     <h3>Place Your Order</h3>
-    <p>অর্ডার করতে ফর্ম পূরণ করুন</p>
+    <p>অর্ডার করতে নিচের ফর্মটি পূরণ করুন</p>
   </div>
-  <form class="order-form" onsubmit="alert('অর্ডার সাবমিট হয়েছে! আমরা শীঘ্রই যোগাযোগ করবো।');return false;">
+  <form class="order-form" id="orderForm">
     <h4>অর্ডার ফর্ম</h4>
-    <input type="text" placeholder="আপনার নাম" required>
-    <input type="tel" placeholder="মোবাইল নাম্বার" required>
-    <select required>
+    <input type="text" id="name" placeholder="আপনার পুরো নাম" required>
+    <input type="tel" id="phone" placeholder="মোবাইল নাম্বার" required>
+    <select id="product" required>
       <option value="">প্রোডাক্ট সিলেক্ট করুন</option>
-      <option>সুন্দরবনের মধু</option>
+      <option>সুন্দরবনের খাঁটি মধু</option>
       <option>পাহাড়ি জঙ্গলের মধু</option>
-      <option>গ্রাম্য মধু</option>
-      <option>প্রিমিয়াম জুতা</option>
+      <option>গ্রাম্য প্রাকৃতিক মধু</option>
+      <option>প্রিমিয়াম কমফোর্ট জুতা</option>
       <option>এক্সপোর্ট কোয়ালিটি কাপড়</option>
       <option>মিনি সোলার ফ্যান</option>
     </select>
-    <input type="number" placeholder="পরিমাণ" min="1" required>
-    <textarea rows="3" placeholder="ডেলিভারি ঠিকানা" required></textarea>
+    <input type="number" id="qty" placeholder="পরিমাণ" min="1" required>
+    <textarea id="address" rows="4" placeholder="সম্পূর্ণ ডেলিভারি ঠিকানা" required></textarea>
     <button type="submit">অর্ডার কনফার্ম করুন</button>
   </form>
 </section>
 
 <section id="contact">
   <div class="section-title">
-    <h3>Get In Touch</h3>
-    <p>অর্ডার ও তথ্যের জন্য যোগাযোগ করুন</p>
+    <h3>Contact Us</h3>
+    <p>যেকোনো প্রয়োজনে আমাদের সাথে যোগাযোগ করুন</p>
   </div>
   <div style="text-align:center;">
-    <p style="color:var(--muted);font-size:18px;margin-bottom:10px;">WhatsApp / Call</p>
-    <p style="color:var(--accent);font-size:24px;font-weight:700;">01837218731</p>
-    <p style="color:var(--muted);margin-top:20px;">Email: contact@landofbengalbd.com</p>
+    <p style="color:var(--muted);font-size:18px;margin-bottom:12px;">WhatsApp / Call</p>
+    <p style="color:var(--accent);font-size:30px;font-weight:700;">01837218731</p>
   </div>
 </section>
 
 <footer>
-  © 2026 Land of Bengal BD. Crafted with ❤️ in Bengal
+  © 2026 Bengal Heritage Hub. Crafted with ❤️ in Bengal
 </footer>
 
 <script>
+// Particles Background
 const canvas = document.getElementById('particles');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-
 let particles = [];
-for(let i=0;i<50;i++){
+for(let i=0;i<60;i++){
   particles.push({
     x:Math.random()*canvas.width,
     y:Math.random()*canvas.height,
-    vx:(Math.random()-0.5)*0.5,
-    vy:(Math.random()-0.5)*0.5,
-    size:Math.random()*2+1
+    vx:(Math.random()-0.5)*0.6,
+    vy:(Math.random()-0.5)*0.6,
+    size:Math.random()*2.5+1
   });
 }
-
 function animate(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
-  ctx.fillStyle='rgba(212,175,55,0.3)';
+  ctx.fillStyle='rgba(212,175,55,0.35)';
   particles.forEach(p=>{
     p.x+=p.vx;p.y+=p.vy;
     if(p.x<0||p.x>canvas.width)p.vx*=-1;
@@ -366,16 +321,32 @@ function animate(){
 }
 animate();
 
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-    }
-  });
-},{threshold:0.1});
+// Order Form Submission - Google Sheet + WhatsApp
+document.getElementById('orderForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  
+  let name = document.getElementById('name').value;
+  let phone = document.getElementById('phone').value;
+  let product = document.getElementById('product').value;
+  let qty = document.getElementById('qty').value;
+  let address = document.getElementById('address').value;
 
-document.querySelectorAll('.section-title,.product').forEach(el=>{
-  observer.observe(el);
+  let data = {name, phone, product, qty, address};
+
+  // 1. Send to Google Sheet
+  const googleURL = 'PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE';
+  fetch(googleURL, {
+    method:'POST', 
+    body:JSON.stringify(data), 
+    mode:'no-cors'
+  });
+
+  // 2. Send to WhatsApp
+  let message = `নতুন অর্ডার%0A%0A👤 নাম: ${name}%0A📱 ফোন: ${phone}%0A📦 প্রোডাক্ট: ${product}%0A🔢 পরিমাণ: ${qty}%0A📍 ঠিকানা: ${address}`;
+  window.open(`https://wa.me/8801837218731?text=${message}`, '_blank');
+  
+  alert('✅ অর্ডার সাবমিট হয়েছে! আমরা শীঘ্রই যোগাযোগ করবো।');
+  this.reset();
 });
 
 window.addEventListener('resize',()=>{
