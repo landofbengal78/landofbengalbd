@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bengal Heritage Hub | Authentic Bengal Products</title>
+<title>Land of Bengal | Authentic Heritage Products</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Playfair+Display:wght@700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap');
 
@@ -34,11 +34,11 @@ header{
 }
 .logo{
   font-family:'Playfair Display',serif;
-  font-size:30px;font-weight:800;
+  font-size:32px;font-weight:800;
   background:linear-gradient(135deg,var(--accent),var(--accent2),var(--accent));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   filter:drop-shadow(0 0 30px var(--accent-glow));
-  letter-spacing:2.5px;
+  letter-spacing:3px;
 }
 nav a{
   color:var(--muted);margin-left:28px;text-decoration:none;
@@ -51,11 +51,19 @@ nav a:hover{color:var(--accent);}
   display:flex;flex-direction:column;justify-content:center;align-items:center;
   text-align:center;padding:0 5%;
 }
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:84px;font-weight:800;line-height:1.1;
+  background:linear-gradient(135deg,#fff,var(--accent2),var(--accent));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  letter-spacing:2px;
+  text-shadow:0 0 60px rgba(212,175,55,0.4);
+}
 .hero h2{
   font-family:'Playfair Display',serif;
-  font-size:72px;font-weight:800;line-height:1.2;
-  background:linear-gradient(135deg,#fff,var(--accent2));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  font-size:42px;font-weight:700;line-height:1.2;
+  color:var(--accent2);
+  margin-top:15px;
 }
 .hero .bangla{
   font-family:'Hind Siliguri',sans-serif;
@@ -107,7 +115,6 @@ section{padding:100px 5%;}
   font-size:24px;font-family:'Playfair Display',serif;
 }
 .product-info p{color:var(--muted);font-size:15px;line-height:1.8;font-family:'Hind Siliguri',sans-serif;}
-.benefits{margin-top:15px;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.9;font-family:'Hind Siliguri',sans-serif;}
 .tag{
   display:inline-block;margin-top:18px;padding:9px 20px;
   border:1px solid rgba(212,175,55,0.4);
@@ -154,7 +161,8 @@ footer{
 }
 
 @media(max-width:768px){
-  .hero h2{font-size:42px;}
+  .hero h1{font-size:52px;}
+  .hero h2{font-size:28px;}
   .logo{font-size:26px;}
   nav{display:none;}
 }
@@ -165,7 +173,7 @@ footer{
 <canvas id="particles"></canvas>
 
 <header>
-  <h1 class="logo">Bengal Heritage Hub</h1>
+  <h1 class="logo">Land of Bengal</h1>
   <nav>
     <a href="#home">Home</a>
     <a href="#products">Products</a>
@@ -175,9 +183,10 @@ footer{
 </header>
 
 <section class="hero" id="home">
+  <h1>Land of Bengal</h1>
   <h2>Where Bengal's Soul Lives</h2>
   <p class="bangla">বাংলার প্রাণ, ঐতিহ্য আর বিশুদ্ধতার বিশ্বস্ত ঠিকানা</p>
-  <p>Authentic honey, premium fabrics, footwear and solar solutions. Sourced directly from the heart of Bengal with 100% quality guarantee.</p>
+  <p>Authentic honey, premium fabrics, footwear and solar solutions. Sourced directly from the heart of Bengal with premium quality guarantee.</p>
   <button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Explore Collection</button>
 </section>
 
@@ -189,16 +198,16 @@ footer{
   <div class="products">
     
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=800" alt="Sundarbans Honey">
+      <img src="images/sundarban-honey.jpg" alt="Sundarbans Honey">
       <div class="product-info">
         <h4>সুন্দরবনের খাঁটি মধু</h4>
-        <p>বিশ্বের বৃহত্তম ম্যানগ্রোভ বন সুন্দরবনের গভীর থেকে সংগ্রহ করা ১০% প্রাকৃতিক মধু। প্রাকৃতিক অ্যান্টিবায়োটিক গুণসম্পন্ন।</p>
+        <p>বিশ্বের বৃহত্তম ম্যানগ্রোভ বন সুন্দরবনের গভীর থেকে সংগ্রহ করা খাঁটি প্রাকৃতিক মধু। প্রাকৃতিক অ্যান্টিবায়োটিক গুণসম্পন্ন।</p>
         <span class="tag">Premium Grade</span>
       </div>
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=800" alt="Hill Forest Honey">
+      <img src="images/hill-honey.jpg" alt="Hill Forest Honey">
       <div class="product-info">
         <h4>পাহাড়ি জঙ্গলের মধু</h4>
         <p>চট্টগ্রাম ও পার্বত্য অঞ্চলের পাহাড়ি ফুলের নির্যাস থেকে মৌমাছির তৈরি ঘন ও সুগন্ধি মধু।</p>
@@ -207,7 +216,7 @@ footer{
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1558642452-9b32038b66e3?w=800" alt="Village Honey">
+      <img src="images/gramya-honey.jpg" alt="Village Honey">
       <div class="product-info">
         <h4>গ্রাম্য প্রাকৃতিক মধু</h4>
         <p>বাংলার গ্রামাঞ্চলের ঐতিহ্যবাহী পদ্ধতিতে সংগ্রহ করা খাঁটি মধু। কাচের জারে সংরক্ষিত।</p>
@@ -238,12 +247,6 @@ footer{
       <div class="product-info">
         <h4>মিনি সোলার ফ্যান</h4>
         <p>পোর্টেবল সোলার ফ্যান। লোডশেডিংয়ে আরাম, বিদ্যুৎ বিল শূন্য।</p>
-        <ul class="benefits">
-          <li>• 6-8 ঘন্টা ব্যাকআপ টাইম</li>
-          <li>• রিচার্জেবল ব্যাটারি সিস্টেম</li>
-          <li>• শব্দহীন অপারেশন</li>
-          <li>• কমপ্যাক্ট পোর্টেবল ডিজাইন</li>
-        </ul>
         <span class="tag">Eco Friendly</span>
       </div>
     </div>
@@ -287,7 +290,7 @@ footer{
 </section>
 
 <footer>
-  © 2026 Bengal Heritage Hub. Crafted with ❤️ in Bengal
+  © 2026 Land of Bengal. Crafted with ❤️ in Bengal
 </footer>
 
 <script>
@@ -333,7 +336,6 @@ document.getElementById('orderForm').addEventListener('submit', function(e){
 
   let data = {name, phone, product, qty, address};
 
-  // 1. Send to Google Sheet
   const googleURL = 'PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE';
   fetch(googleURL, {
     method:'POST', 
@@ -341,7 +343,6 @@ document.getElementById('orderForm').addEventListener('submit', function(e){
     mode:'no-cors'
   });
 
-  // 2. Send to WhatsApp
   let message = `নতুন অর্ডার%0A%0A👤 নাম: ${name}%0A📱 ফোন: ${phone}%0A📦 প্রোডাক্ট: ${product}%0A🔢 পরিমাণ: ${qty}%0A📍 ঠিকানা: ${address}`;
   window.open(`https://wa.me/8801837218731?text=${message}`, '_blank');
   
